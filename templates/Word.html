@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<body>
+  <h2>Dictionary</h2>
+  <h4> {{ word }} </h4>
+  {% if flag  %}
+  <h4> Did you mean: {{ like_word }} </h4>
+  {% endif %}
+  {% for item in result %}
+  <ul>
+   <li>{{ item }} </li>
+ </ul>
+  {% endfor %}
+  <h3> {{ error }}</h3>
+</body>
+</head>
+</html>
